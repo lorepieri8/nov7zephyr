@@ -1,0 +1,58 @@
+# Kconfig - STM32F746G DISCOVERY board configuration
+#
+# Copyright (c) 2018 Yurii Hamann
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+if BOARD_STM32F746G_DISCO
+
+config BOARD
+	default "stm32f746g_disco"
+
+if UART_CONSOLE
+
+config UART_STM32_PORT_1
+	default y
+
+endif # UART_CONSOLE
+
+if NETWORKING
+
+config NET_L2_ETHERNET
+	def_bool y
+
+config ETH_STM32_HAL
+	def_bool y
+
+endif # NETWORKING
+
+if SERIAL
+
+config UART_STM32_PORT_6
+	default y
+
+endif # SERIAL
+
+if I2C
+
+config I2C_1
+	def_bool y
+
+endif # I2C
+
+if SPI
+
+config SPI_2
+	def_bool y
+
+endif # SPI
+
+if PWM
+
+config PWM_STM32_1
+	def_bool y
+
+endif # PWM
+
+endif # BOARD_STM32F746G_DISCO

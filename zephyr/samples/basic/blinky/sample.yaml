@@ -1,0 +1,6 @@
+sample:
+  name: Blinky Sample
+tests:
+  test:
+    tags: LED gpio
+    depends_on: gpio

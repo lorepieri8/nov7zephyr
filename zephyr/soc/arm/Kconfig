@@ -1,0 +1,22 @@
+config CPU_HAS_ARM_MPU
+	bool
+	# Omit prompt to signify "hidden" option
+	select CPU_HAS_MPU
+	help
+	  This option is enabled when the CPU has a Memory Protection Unit (MPU)
+	  in ARM flavor.
+
+config CPU_HAS_NXP_MPU
+	bool
+	# Omit prompt to signify "hidden" option
+	select CPU_HAS_MPU
+	help
+	  This option is enabled when the CPU has a Memory Protection Unit (MPU)
+	  in NXP flavor.
+
+config CPU_HAS_ARM_SAU
+	bool
+	# Omit prompt to signify "hidden" option
+	select CPU_HAS_TEE
+	help
+	  MCU implements the ARM Security Attribution Unit (SAU).
