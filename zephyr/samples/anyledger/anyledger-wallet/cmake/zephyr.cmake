@@ -44,6 +44,7 @@ set_target_properties(app PROPERTIES COMPILE_FLAGS "-Wall -Wextra")
 include_directories(zephyr/)
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/zephyr/)
 
+
 add_dependencies(app trezor-crypto-lib)
 add_dependencies(app wallet)
 target_link_libraries(app PUBLIC wallet trezor-crypto)
