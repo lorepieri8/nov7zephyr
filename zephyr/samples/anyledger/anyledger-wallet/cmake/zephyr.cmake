@@ -6,6 +6,9 @@ include(ExternalProject)
 # this is zephyr app
 file(GLOB SOURCES "zephyr/*.c")
 
+message("--------------")
+message("Zephyr.cmake")
+message("--------------")
 
 # ERC20 contract ABI
 set(ERC20_JSON ${CMAKE_CURRENT_BINARY_DIR}/zephyr/erc20_token.json)
@@ -45,6 +48,7 @@ include_directories(zephyr/)
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/zephyr/)
 
 
+
 add_dependencies(app trezor-crypto-lib)
 add_dependencies(app wallet)
-target_link_libraries(app PUBLIC wallet trezor-crypto)
+target_link_libraries(app PUBLIC wallet trezor-crypto33)

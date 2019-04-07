@@ -4,6 +4,10 @@ include(ExternalProject)
 set(mylib_build_dir ${CMAKE_CURRENT_BINARY_DIR}/trezor-crypto)
 set(mylib_source_dir ${CMAKE_CURRENT_BINARY_DIR}/thirdparty/trezor-crypto)
 
+message("--------------")
+message("trezor-crypto.cmake")
+message("--------------")
+
 ExternalProject_Add(
   trezor-crypto-lib
 
